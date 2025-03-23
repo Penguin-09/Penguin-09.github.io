@@ -1,0 +1,342 @@
+[
+    {
+        "name": "Life Ring",
+        "id": 0,
+        "value": 150,
+        "weight": 0.3,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/0/06/Life_Ring_%28DSIII%29.png",
+        "effect": "Raises maximum HP by 7%.",
+        "description": [
+            "A generations-old ring set with a small red jewel. Raises maximum HP.",
+            "Rings have unique powers, and their discovery will do much to ease a wearisome journey."
+        ]
+    },
+    {
+        "name": "Sun princess Ring",
+        "id": 1,
+        "value": 600,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/2/2e/Sun_Princess_Ring.png",
+        "effect": "Restores 2 HP per second.",
+        "description": [
+            "Ring associated with Gwynevere, princess of sunlight and eldest daughter of Gwyn, the First Lord.",
+            "The ring is vaguely warm, like a beam of sunlight, and gradually restores HP.",
+            "Gwynevere left her home with a great many other deities, and became a wife and a mother, raising several heavenly children."
+        ]
+    },
+    {
+        "name": "Estus Ring",
+        "id": 2,
+        "value": 1000,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/7/70/Estus_Ring.png",
+        "effect": "Increases HP restored by Estus Flask by 20%.",
+        "description": [
+            "A green ring crafted from shards. Increases HP restored by Estus Flask.",
+            "This ring was entrusted to a certain Fire Keeper, but in the end she never met her champion, and the ensuing tragic farce became a favorite tale of the masses."
+        ]
+    },
+    {
+        "name": "Ashen Estus Ring",
+        "id": 3,
+        "value": 1000,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/f/fd/Ashen_Estus_Ring.png",
+        "effect": "Increases FP restored by Ashen Estus Flask by 20%.",
+        "description": [
+            "Gray crystalline ring crafted from shards. Increases FP restored by Ashen Estus Flask.",
+            "Once a treasure brought before Lothric's Queen, she had it enshrined in the Cemetery of Untended Graves, so that one day an Unkindled might profit from its use."
+        ]
+    },
+    {
+        "name": "Cloranthy Ring",
+        "id": 4,
+        "value": 100,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/6/63/Chloranthy_Ring_%28DSIII%29.png",
+        "effect": "Raises stamina recovery speed by 7 points per second.",
+        "description": [
+            "This old ring is named for its decorative green blossom, but its luster is long since faded.",
+            "Raises stamina recovery speed."
+        ]
+    },
+    {
+        "name": "Havel's Ring",
+        "id": 5,
+        "value": 100,
+        "weight": 1.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/5/56/Havel%27s_Ring_%28DSIII%29.png",
+        "effect": "Increases maximum equip load by 15%.",
+        "description": [
+            "A ring for warriors keen on heavy accoutrements. Increases maximum equip load.",
+            "This ring was named after Havel the Rock, the battlefield compatriot of Gwyn, the First Lord.",
+            "The art of war has been a constant since ages past, and those who follow in Havel's footsteps are no fewer now than in his own day."
+        ]
+    },
+    {
+        "name": "Ring of Favor",
+        "id": 6,
+        "value": 100,
+        "weight": 1.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/d5/Ring_of_Favor.png",
+        "effect": "Increases max HP by 3%, stamina by 9%, and maximum equip load by 5%.",
+        "description": [
+            "A ring symbolizing the favor of the Goddess Fina, whose 'fateful beauty' is mentioned in legend.",
+            "True to the fickle nature of Fina's favor, her ring increases max HP, stamina, and maximum equip load."
+        ]
+    },
+    {
+        "name": "Prisoner's Chain",
+        "id": 7,
+        "value": 150,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/0/09/Prisoner%27s_Chain.png",
+        "effect": "Gain vigor, endurance, and vitality by 5, but take 4% extra damage.",
+        "description": [
+            "Portion of a steel chain used to restrain Gundyr. Gain vigor, endurance, and vitality, but take extra damage.",
+            "A prisoner is one who has staked everything on a belief, a proclivity most apparent in the greatest of champions."
+        ]
+    },
+    {
+        "name": "Ring of Steel Protection",
+        "id": 8,
+        "value": 300,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/a/a1/Ring_of_Steel_Protection_%28DSIII%29.png",
+        "effect": "Increases physical damage absorption by 10%.",
+        "description": [
+            "Ring of the Knight King of ancient legend. Increases physical damage absorption.",
+            "The Knight King was said to be lined with steel on the inside, such that even the talons of mighty dragons did him little harm."
+        ]
+    },
+    {
+        "name": "Magic Stoneplate Ring",
+        "id": 9,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/1/16/Magic_Stoneplate_Ring.png",
+        "effect": "Increases Magic damage absorption by 13%.",
+        "description": [
+            "Stoneplates are symbols of true knights, and blue stoneplates are granted to royal palace guards.",
+            "Increases magic damage absorption."
+        ]
+    },
+    {
+        "name": "Flame Stoneplate Ring",
+        "id": 10,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/5/5e/Flame_Stoneplate_Ring_%28DSIII%29.png",
+        "effect": "Increases fire damage absorption by 13%.",
+        "description": [
+            "Stoneplates are symbols of true knights, and red stoneplates are granted to those who valiantly face Chaos.",
+            "Increases fire damage absorption."
+        ]
+    },
+    {
+        "name": "Thunder Stoneplate Ring",
+        "id": 11,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/1/1b/Thunder_Stoneplate_Ring_%28DSIII%29.png",
+        "effect": "Increases lightning damage absorption by 13%.",
+        "description": [
+            "Stoneplates are symbols of true knights, and yellow stoneplates are granted to those who would become dragons.",
+            "Increases lightning damage absorption."
+        ]
+    },
+    {
+        "name": "Dark Stoneplate Ring",
+        "id": 12,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/c/ca/Dark_Stoneplate_Ring.png",
+        "effect": "Increases dark damage absorption by 13%.",
+        "description": [
+            "Stoneplates are symbols of true knights, and dark purple stoneplates are granted to Undead knights.",
+            "Increases dark damage absorption."
+        ]
+    },
+    {
+        "name": "Speckled Stoneplate Ring",
+        "id": 13,
+        "value": 100,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/7/77/Speckled_Stoneplate_Ring_%28DSIII%29.png",
+        "effect": "Increases magic, fire, lightning, and dark damage absorption by 5%.",
+        "description": [
+            "Stoneplates are symbols of true knights, and speckled stoneplates are granted to those who face an endless journey.",
+            "Slightly increases magic, fire, lightning, and dark damage absorption."
+        ]
+    },
+    {
+        "name": "Bloodbite Ring",
+        "id": 14,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/1/1f/Bloodbite_Ring_%28DSIII%29.png",
+        "effect": "Increases bleed resistance by 90.",
+        "description": [
+            "One of the bite rings native to Carim. Increases bleed resistance.",
+            "The crafting of these rings is forbidden, perhaps owing to a fear of malleable stones. Clerics, however, dabble freely in the art."
+        ]
+    },
+    {
+        "name": "Poisonbite Ring",
+        "id": 15,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/1/1a/Poisonbite_Ring_%28DSIII%29.png",
+        "effect": "Increases poison resistance by 90.",
+        "description": [
+            "One of the bite rings native to Carim. Increases poison resistance.",
+            "The crafting of these rings is forbidden, perhaps owing to a fear of malleable stone. Clerics, however, dabble freely in the art."
+        ]
+    },
+    {
+        "name": "Chillbite Ring",
+        "id": 16,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/f/fe/Chillbite_Ring.png",
+        "effect": "Increases frost resistance by 140 points.",
+        "description": [
+            "One of the bite rings native to Carim. Increases frost resistance.",
+            "This ring would never grace Friede's hand, for the painting and its frost became her home."
+        ]
+    },
+    {
+        "name": "Curesbite Ring",
+        "id": 17,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/c/c7/Cursebite_Ring_%28DSIII%29.png",
+        "effect": "Increases curse resistance by 90.",
+        "description": [
+            "One of the bite rings native to Carim. Increases curse resistance.",
+            "The crafting of these rings is forbidden, perhaps owing to a fear of malleable stone. Clerics, however, dabble freely in the art."
+        ]
+    },
+    {
+        "name": "Fleshbite Ring",
+        "id": 18,
+        "value": 100,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/4/43/Fleshbite_Ring.png",
+        "effect": "Raises poison, bleed, frost and curse resistance by 40.",
+        "description": [
+            "One of the bite rings native to Carim. Raises poison, bleed, frost and curse resist.",
+            "The crafting of these rings is forbidden, perhaps owing to a fear of malleable stone. Clerics, however, dabble freely in the art."
+        ]
+    },
+    {
+        "name": "Knight's Ring",
+        "id": 19,
+        "value": 300,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/c/ce/Knight%27s_Ring.png",
+        "effect": "Increases strength by 5.",
+        "description": [
+            "Ring engraved with a portrait of a knight. Increases strength.",
+            "In Lothric, the Knight has long been considered one of the Three Pillars of the king's rule, and were thus allowed to rear dragons."
+        ]
+    },
+    {
+        "name": "Hunter's Ring",
+        "id": 20,
+        "value": 300,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/6/6d/Hunter%27s_Ring.png",
+        "effect": "Increases dexterity by 5.",
+        "description": [
+            "Ring engraved with a portrait of a hunter. Increases dexterity.",
+            "The hunters serve Lothric on the fringes and in the shadows. For generations, rulers of Lothric have relied especially upon the Black Hand hunters to punish enemies in ways that the king's Three Pillars cannot."
+        ]
+    },
+    {
+        "name": "Scholar Ring",
+        "id": 21,
+        "value": 1000,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/a/a0/Scholar_Ring.png",
+        "effect": "Increases Intelligence by 5.",
+        "description": [
+            "Ring engraved with a portrait of a scholar. Increases intelligence.",
+            "In Lothric, the Scholar has long been considered one of the Three Pillars of the king's rule, and is therefore master of the Grand Archives."
+        ]
+    },
+    {
+        "name": "Priestess Ring",
+        "id": 22,
+        "value": 1000,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/e/e7/Priestess_Ring.png",
+        "effect": "Increases faith",
+        "description": [
+            "A ring engraved with a portrait of the High Priestess. Increases faith.",
+            "In Lothric, the High Priestess has long been considered one of the Three Pillars of the king's rule. The High Priestess also served as the prince's wet nurse."
+        ]
+    },
+    {
+        "name": "Covetous Gold Serpent Ring",
+        "id": 23,
+        "value": 500,
+        "weight": 1.2,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/4/41/Covetous_Gold_Serpent_Ring_%28DSIII%29.png",
+        "effect": "Increases item discovery by 50.",
+        "description": [
+            "A gold ring depicting a snake that could have been, but never was, a dragon.",
+            "Fallen foes are more likely to drop items.",
+            "Snakes are known as creatures of great avarice, devouring prey even larger than themselves by swallowing them whole. If one's shackles are cause for discontent, perhaps it is time for some good old fashioned greed."
+        ]
+    },
+    {
+        "name": "Covetous Silver Serpent Ring",
+        "id": 24,
+        "value": 500,
+        "weight": 1.2,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/d1/Covetous_Silver_Serpent_Ring_%28DSIII%29.png",
+        "effect": "Fallen foes yield 10% more souls.",
+        "description": [
+            "A silver ring depicting a snake that could have been, but never was, a dragon. Fallen foes yield more souls.",
+            "Snakes are known as creatures of great avarice, devouring prey even larger than themselves by swallowing them whole.",
+            "If one's shackles are cause for discontent, perhaps it is time for some old-fashioned greed."
+        ]
+    },
+    {
+        "name": "Saint's Ring",
+        "id": 25,
+        "value": 100,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/b/b3/Saint%27s_Ring.png",
+        "effect": "Grants one extra attunement slot.",
+        "description": [
+            "A ring bestowed upon a Carim Saint. Allows attunement of additional spells.",
+            "In Carim, the saints give voice to the ancient tales. They memorize countless cumbersome sacred books and read them in sonorous tones, a function for which they are widely renowned."
+        ]
+    },
+    {
+        "name": "Deep Ring",
+        "id": 26,
+        "value": 1000,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/a/aa/Deep_Ring.png",
+        "effect": "Grants one additional attunement slot.",
+        "description": [
+            "A ring bestowed upon the Deacons of the Cathedral of the Deep. Allows attunement of additional spells.",
+            "In the Cathedral slumber things most terrible, and as such, the deacons require a grand narrative, to ensure they do not falter in their duty. A philosophy, to ward away the madness beckoned by the grotesqueries at hand."
+        ]
+    },
+    {
+        "name": "Darkmoon Ring",
+        "id": 27,
+        "value": 1000,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/f/f6/Darkmoon_Ring.png",
+        "effect": "Grants two additional attunement slots.",
+        "description": [
+            "Ring of the moon deity Gwyndolin, youngest son of Gwyn, the First Lord. Adds many slots for attunement.",
+            "Gwyndolin, also known as the Dark Sun, commands the Darkmoon Knights, and bestows this ring upon the best of them."
+        ]
+    }
+]

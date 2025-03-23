@@ -1,0 +1,33 @@
+:root {
+    --colorGreyLighter: #2d2d2d;
+    --colorGreyLight: #242424;
+    --colorGreyDark: #1f1f1f;
+    --colorRed: #ba2222;
+    --colorRedDark: #3a0707;
+    --colorWhite: #e0e0e0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: var(--colorGreyDark);
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.customHover {
+    transition: transform 0.3s ease;
+}
+
+.customHover:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.customInput:hover {
+    cursor: text;
+}
