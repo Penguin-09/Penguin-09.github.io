@@ -28,6 +28,16 @@ a:hover {
     cursor: pointer;
 }
 
+.customInput {
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 0.375rem;
+}
+
 .customInput:hover {
     cursor: text;
+}
+
+.customInput:focus {
+    transform: scale(1.1);
 }
