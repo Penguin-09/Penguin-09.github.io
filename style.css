@@ -44,6 +44,40 @@ a:hover {
     transform: scale(1.1);
 }
 
+/* Hero Rings */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#heroRing0,
+#heroRing1,
+#heroRing2 {
+    opacity: 0;
+    animation: popIn 0.8s ease forwards;
+}
+
+#heroRing0 {
+    animation-delay: 0.4s;
+}
+
+#heroRing1 {
+    animation-delay: 0.6s;
+}
+
+#heroRing2 {
+    animation-delay: 0.2s;
+}
+
 /* Store Card */
 .customStoreCard {
     padding: 10px;
