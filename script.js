@@ -27,37 +27,88 @@ function printHeroRings(data) {
 }
 
 /**
- * Generate cards in the store element for 16 rings
+ * Generate a store card and fill it with ring data
+ * @param {*} data The ring data from the json file
+ * @param {*} index The index of the ring in the json file
+ */
+function printStoreCards(data, index) {
+    // Store Card Element
+    let cardElement = document.createElement("div");
+    cardElement.classList.add(
+        "customStoreCard",
+        "col-12",
+        "col-sm-6",
+        "col-md-4",
+        "col-lg-3"
+    );
+
+    // Name Element
+    let nameElement = document.createElement("h2");
+    nameElement.textContent = data[index].name;
+    nameElement.classList.add("customStoreCardName");
+    cardElement.appendChild(nameElement);
+
+    // Image Element
+    let imageElement = document.createElement("img");
+    imageElement.src = data[index].imageURL;
+    imageElement.alt = data[index].name;
+    cardElement.appendChild(imageElement);
+
+    // Effect Element
+    let effectElement = document.createElement("p");
+    effectElement.textContent = data[index].effect;
+    cardElement.appendChild(effectElement);
+
+    storeElement.appendChild(cardElement);
+    console.log("Store card created for ring: " + data[index].name);
+
+    let infoElement = document.createElement("div");
+    infoElement.classList.add("customStoreCardInfo");
+
+    // Price Element
+    let priceDivElement = document.createElement("div");
+    priceDivElement.classList.add("customStoreCardPrice");
+
+    let priceImageElement = document.createElement("img");
+    priceImageElement.src =
+        "https://static.wikia.nocookie.net/darksouls/images/7/78/Soul_of_an_Old_Hand.png";
+    priceImageElement.alt = "souls";
+    priceDivElement.appendChild(priceImageElement);
+
+    let priceElement = document.createElement("p");
+    priceElement.textContent = data[index].value + " souls";
+    priceDivElement.appendChild(priceElement);
+
+    infoElement.appendChild(priceDivElement);
+
+    // Weight Element
+    let weightDivElement = document.createElement("div");
+    weightDivElement.classList.add("customStoreCardWeight");
+
+    let weightImageElement = document.createElement("img");
+    weightImageElement.src =
+        "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/icon_weight.png";
+    weightImageElement.alt = "weight";
+    weightDivElement.appendChild(weightImageElement);
+
+    let weightElement = document.createElement("p");
+    weightElement.textContent = data[index].weight + " units";
+    weightDivElement.appendChild(weightElement);
+
+    infoElement.appendChild(weightDivElement);
+
+    cardElement.appendChild(infoElement);
+}
+
+/**
+ * Print ring cards in the store
  * @param {*} data The ring data from the json file
  */
 function printStoreCards(data) {
     let storeElement = document.getElementById("storeElement");
 
     for (let i = 0; i < 16; i++) {
-        // Store Card Element
-        let cardElement = document.createElement("div");
-        cardElement.classList.add("customStoreCard", "col-12", "col-sm-6", "col-md-4", "col-lg-3");
-
-        // Name Element
-        let nameElement = document.createElement("h2");
-        nameElement.textContent = data[i].name;
-        nameElement.classList.add("customStoreCardName");
-        cardElement.appendChild(nameElement);
-
-        // Image Element
-        let imageElement = document.createElement("img");
-        imageElement.src = data[i].imageURL;
-        imageElement.alt = data[i].name;
-        imageElement.classList.add("customHover");
-        cardElement.appendChild(imageElement);
-
-        // Effect Element
-        let effectElement = document.createElement("p");
-        effectElement.textContent = data[i].effect;
-        cardElement.appendChild(effectElement);
-        
-        storeElement.appendChild(cardElement);
-        console.log("Store card created for ring: " + data[i].name);
+        printStoreCards(data, i);
     }
 }
 

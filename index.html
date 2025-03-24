@@ -28,7 +28,10 @@
     </head>
     <body>
         <!-- HEADER -->
-        <div class="d-flex justify-content-between p-3">
+        <div
+            class="d-flex justify-content-between p-3 position-absolute t-0"
+            style="z-index: 3"
+        >
             <!-- Title -->
             <a class="customHover d-flex align-items-center" href="#">
                 <img
@@ -41,9 +44,13 @@
                     Hollow's Hoard
                 </p>
             </a>
+        </div>
 
+        <div class="sticky-top p-3 d-none d-lg-block" style="z-index: 2">
             <!-- Navigation -->
-            <div class="d-flex flex-column flex-md-row gap-4">
+            <div
+                class="d-flex flex-column flex-md-row gap-4 justify-content-end"
+            >
                 <!-- Home -->
                 <a class="customHover d-flex" href="#">
                     <i
@@ -144,13 +151,13 @@
 
         <!-- STORE NAVIGATION -->
         <div
-            class="d-flex justify-content-center align-items-center p-3 sticky-top"
-            style="background-color: var(--colorGreyDark)"
+            class="d-flex justify-content-center align-items-center p-2 sticky-top"
+            style="background-color: var(--colorGreyDark); z-index: 1"
         >
             <!-- Search -->
             <div class="d-flex">
                 <input
-                    class="customInput fs-4 p-1 me-1"
+                    class="customInput fs-4 me-1"
                     style="
                         background-color: var(--colorGreyLighter);
                         color: var(--colorWhite);
