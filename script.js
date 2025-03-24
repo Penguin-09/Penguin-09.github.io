@@ -27,16 +27,16 @@ function printHeroRings(data) {
 }
 
 /**
- * Generate cards in the store element for 15 rings
+ * Generate cards in the store element for 16 rings
  * @param {*} data The ring data from the json file
  */
 function printStoreCards(data) {
     let storeElement = document.getElementById("storeElement");
 
-    for (let i = 0; i < 24; i++) {
+    for (let i = 0; i < 16; i++) {
         // Store Card Element
         let cardElement = document.createElement("div");
-        cardElement.classList.add("customStoreCard");
+        cardElement.classList.add("customStoreCard", "col-12", "col-sm-6", "col-md-4", "col-lg-3");
 
         // Name Element
         let nameElement = document.createElement("h2");
