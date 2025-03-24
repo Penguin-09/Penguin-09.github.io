@@ -213,7 +213,8 @@
         "imageURL": "https://static.wikia.nocookie.net/darksouls/images/c/c7/Cursebite_Ring_%28DSIII%29.png",
         "effect": "Increases curse resistance by 90.",
         "description": [
-            "One of the bite rings native to Carim. Increases curse resistance.",
+            "One of the bite rings native to Carim.",
+            "Increases curse resistance.",
             "The crafting of these rings is forbidden, perhaps owing to a fear of malleable stone. Clerics, however, dabble freely in the art."
         ]
     },
@@ -323,7 +324,8 @@
         "imageURL": "https://static.wikia.nocookie.net/darksouls/images/a/aa/Deep_Ring.png",
         "effect": "Grants one additional attunement slot.",
         "description": [
-            "A ring bestowed upon the Deacons of the Cathedral of the Deep. Allows attunement of additional spells.",
+            "A ring bestowed upon the Deacons of the Cathedral of the Deep.",
+            "Allows attunement of additional spells.",
             "In the Cathedral slumber things most terrible, and as such, the deacons require a grand narrative, to ensure they do not falter in their duty. A philosophy, to ward away the madness beckoned by the grotesqueries at hand."
         ]
     },
@@ -335,8 +337,556 @@
         "imageURL": "https://static.wikia.nocookie.net/darksouls/images/f/f6/Darkmoon_Ring.png",
         "effect": "Grants two additional attunement slots.",
         "description": [
-            "Ring of the moon deity Gwyndolin, youngest son of Gwyn, the First Lord. Adds many slots for attunement.",
+            "Ring of the moon deity Gwyndolin, youngest son of Gwyn, the First Lord.",
+            "Adds many slots for attunement.",
             "Gwyndolin, also known as the Dark Sun, commands the Darkmoon Knights, and bestows this ring upon the best of them."
+        ]
+    },
+    {
+        "name": "Young Dragon Ring",
+        "id": 28,
+        "value": 100,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/3/3f/Young_Dragon_Ring.png",
+        "effect": "Boosts sorceries by 12%.",
+        "description": [
+            "Ring given in Vinheim, home of sorcery, when newly ordained as a sorcerer.",
+            "Boosts sorceries.",
+            "Apropos to the Dragon School, the seal depicts an everlasting dragon. A young dragon presages the great length of the journey to mastery."
+        ]
+    },
+    {
+        "name": "Bellowing Dragoncrest Ring",
+        "id": 29,
+        "value": 150,
+        "weight": 1.0,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/7/75/Bellowing_Dragoncrest_Ring_%28DSIII%29.png",
+        "effect": "Boosts sorceries by 20%.",
+        "description": [
+            "A special ring given to those who are deemed fit to undertake the journey of discovery in Vinheim, home of sorcery.",
+            "Greatly boost sorceries.",
+            "Apropos to the Dragon School, the seal depicts an everlasting dragon. A bellowing dragon symbolizes the true nature of the consummate sorcerer."
+        ]
+    },
+    {
+        "name": "Great Swamp Ring",
+        "id": 30,
+        "value": 100,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/2/28/Great_Swamp_Ring.png",
+        "effect": "Boosts pyromancies by 12%.",
+        "description": [
+            "Ring said to be chiseled from the bone of a flame salamander by blighted Pyromancers living in the Great Swamp.",
+            "Boosts pyromancies.",
+            "It is believed that salamanders are the descendants of demons, born of the Chaos Flame, from which Pyromancy is also said to have originated."
+        ]
+    },
+    {
+        "name": "Witch's Ring",
+        "id": 31,
+        "value": 150,
+        "weight": 1.0,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/8/86/Witch%27s_Ring.png",
+        "effect": "Boosts pyromancies by 20%.",
+        "description": [
+            "The Witch of Izalith and her daughters, scorched by the Flame of Chaos, taught humans the art of pyromancy and offered them this ring.",
+            "Greatly boosts pyromancies.",
+            "Every pyromancer is familiar with the parable that tells of the witches espousing the need to fear the flame, and teaching the art of pyromancy to men in hopes that they might learn to control it."
+        ]
+    },
+    {
+        "name": "Morne's Ring",
+        "id": 32,
+        "value": 100,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/7/73/Morne%27s_Ring.png",
+        "effect": "Boosts miracles by 12%.",
+        "description": [
+            "A malformed ring given to knights of Carim.",
+            "Boosts miracles.",
+            "Morne served the goddess Caitha and later became an apostle of the Archbishop. They labored together to provide comfort to the suffering."
+        ]
+    },
+    {
+        "name": "Ring of the Sun's First Born",
+        "id": 33,
+        "value": 150,
+        "weight": 1.0,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/1/15/Ring_of_the_Sun%27s_First_Born.png",
+        "effect": "Boosts miracles by 20%.",
+        "description": [
+            "Ring of the Sun's first born, who inherited the light of Gwyn, the first lord.",
+            "Greatly boosts miracles.",
+            "The Sun's first born was once a god of war, until he was stripped of his stature as punishment for his foolishness. No wonder his very name has slipped from the annals of history."
+        ]
+    },
+    {
+        "name": "Lingering Dragoncrest Ring",
+        "id": 34,
+        "value": 100,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/de/Lingering_Dragoncrest_Ring_%28DSIII%29.png",
+        "effect": "Extends length of spell effects by 30%.",
+        "description": [
+            "A special ring given to those who are deemed fit to undertake the journey of discovery in Vinheim, home of sorcery.",
+            "Extends length of spell effect.",
+            "Apropos to the Dragon School, the seal depicts an everlasting dragon. A lingering dragon symbolizes the true nature of the consummate sorcerer."
+        ]
+    },
+    {
+        "name": "Sage Ring",
+        "id": 35,
+        "value": 100,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/4/47/Sage_Ring.png",
+        "effect": "Shortens spell casting time by increasing virtual Dexterity by 30.",
+        "description": [
+            "A ring given to Farron's Undead Legion by one of the preacher twins, known more commonly as the Crystal Sages.",
+            "Shortens spell casting time.",
+            "The sorcerers of Farron's Abyss Watchers were known to be lonesome warriors who would only rely upon more pragmatic spells."
+        ]
+    },
+    {
+        "name": "Dusk Crown Ring",
+        "id": 36,
+        "value": 1000,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/0/05/Dusk_Crown_Ring_%28DaSIII%29.png",
+        "effect": "Reduces most spells' FP consumption by between 20-25%, Reduces HP by 15%.",
+        "description": [
+            "Leaf-colored crown ring bestowed upon the princess of Oolacile, ancient land of golden sorceries.",
+            "Reduces spell FP consumption, but also lowers HP.",
+            "Oolacile is synonymous for its lost sorceries, of which the xanthous sorcerers are dedicated scholars. This crown ring is a rare artifact of great magic heritage."
+        ]
+    },
+    {
+        "name": "Leo Ring",
+        "id": 37,
+        "value": 1000,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/a/a4/Leo_Ring_%28DSIII%29.png",
+        "effect": "Strengthens thrust weapon counter attacks by 15%.",
+        "description": [
+            "Ring associated with Dragon Slayer Ornstein, one of the Four Knights of Gwyn, the First Lord.",
+            "Strengthens thrust weapon counter attacks.",
+            "Ornstein was the first knight of the sun's eldest born, and his cross spear is said to have pierced scales made of stone."
+        ]
+    },
+    {
+        "name": "Wolf Ring",
+        "id": 38,
+        "value": 1000,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/8/82/Wolf_Ring_%28DSIII%29.png",
+        "effect": "Increases poise by 4.",
+        "description": [
+            "Ring associated with Abysswalker Artorias, one of the Four Knights of Gwyn, the First Lord.",
+            "Increase Poise.",
+            "Artorias had an unbendable will of steel, and was unmatched with a greatsword."
+        ]
+    },
+    {
+        "name": "Hawk Ring",
+        "id": 39,
+        "value": 1000,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/0/0f/Hawk_Ring_%28DSIII%29.png",
+        "effect": "Extends firing range of arrows.",
+        "description": [
+            "Ring associated with Hawkeye Gough, one of the Four Knights of Gwyn, the First Lord.",
+            "Extends the range of arrows.",
+            "In his later years, the giant Gough was blinded, but this did not prevent him from striking down a calamitous dragon with his Greatbow."
+        ]
+    },
+    {
+        "name": "Hornet Ring",
+        "id": 40,
+        "value": 1000,
+        "weight": 1.1,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/9/92/Hornet_Ring_%28DSIII%29.png",
+        "effect": "Boosts critical attacks",
+        "description": [
+            "Ring associated with the Lord's Blade Ciaran, one of the Four Knights of Gwyn, the First Lord.",
+            "Boosts critical attacks.",
+            "The masked Ciaran was the only woman to serve in Gwyn's Four Knights, and her curved sword granted a swift death to any and all enemies of the throne."
+        ]
+    },
+    {
+        "name": "Knight Slayer's Ring",
+        "id": 41,
+        "value": 150,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/8/82/Knight_Slayer%27s_Ring.png",
+        "effect": "Enemies lose 10% more stamina when guarding attacks.",
+        "description": [
+            "Ring of the savage Tsorig, more commonly known as the Knight Slayer.",
+            "Enemies lose more stamina when guarding attacks.",
+            "Long ago, Tsorig engaged the guardians of an ancient city in a bloody confrontation, and returned with their rings as his prize, still frozen on their dismembered fingers."
+        ]
+    },
+    {
+        "name": "Ring of the Evil Eye",
+        "id": 42,
+        "value": 100,
+        "weight": 1.0,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/d7/Ring_of_the_Evil_Eye_%28DSIII%29.png",
+        "effect": "Absorb 30 HP from each defeated foe.",
+        "description": [
+            "This ring captured the foul spirit of an evil eye, a creature that ravaged Astora.",
+            "Absorb HP from each defeated foe.",
+            "The horrid spirit nearly destroyed Astora, but was eventually defeated by 'the sword of one most noble.'"
+        ]
+    },
+    {
+        "name": "Farron Ring",
+        "id": 43,
+        "value": 1000,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/d8/Farron_Ring.png",
+        "effect": "Reduces skill FP consumption by 25%.",
+        "description": [
+            "A ring given to Undead Legion of Farron.",
+            "Reduces Skill FP consumption.",
+            "The Abyss Watchers, for their hunting, required a sword technique that went beyond any existing art. Wolf's blood provided just that, and this ring further extends the effect."
+        ]
+    },
+    {
+        "name": "Dragonscale Ring",
+        "id": 44,
+        "value": 1000,
+        "weight": 1.1,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/c/ca/Dragonscale_Ring.png",
+        "effect": "Reduces damage from backstabs.",
+        "description": [
+            "Ring of Oceiros, former king of Lothric. Reduces damage from backstabs.",
+            "In his later years, Oceiros became fascinated with dragons. After going mad, he was more commonly known as the Consumed King. Many assassins were dispatched to his domain, but none returned.",
+            "The Consumed King ascribed his resilience to the divine protection of the dragon scale."
+        ]
+    },
+    {
+        "name": "Horsehoof Ring",
+        "id": 45,
+        "value": 100,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/1/19/Horsehoof_Ring.png",
+        "effect": "Enemies lose 30% more stamina when kicked.",
+        "description": [
+            "An old ring with a seal depicting a horse's hoof. Boosts kick effect.",
+            "Unbreakable Patches adored this ring and the feeling that it gave him when he kicked his marks into the depths of treacherous traps, but suffered no shortage of ridicule from his associates for relying so heavily on the tired old trick.",
+            "But who is the sorrier? The horse who knows only to kick, or the fool who approaches the old beast without thought?."
+        ]
+    },
+    {
+        "name": "Wood Grain Ring",
+        "id": 46,
+        "value": 100,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/b/b5/Wood_Grain_Ring.png",
+        "effect": "Slows equipment degradation by 20%.",
+        "description": [
+            "This special ring crafted in an Eastern land is made of metal, but with a wood grain crest on its surface. Slows equipment degradation.",
+            "Wielders of swords originating in the same region follow a practice of inscribing special words on the blades of their swords, and are naturally drawn to this ring."
+        ]
+    },
+    {
+        "name": "Flynn's Ring",
+        "id": 47,
+        "value": 100,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/6/6e/Flynn%27s_Ring_%28DSIII%29.png",
+        "effect": "Lowering equip load increases attack power.",
+        "description": [
+            "Ring of Flynn, the eulogized thief. Lowering equip load increases attack power.",
+            "Flynn fought with the wind on his side, and was a hero among the weak and poor, yet even his admirers knew that it was little more than an idyllic fable."
+        ]
+    },
+    {
+        "name": "Magic Clutch Ring",
+        "id": 48,
+        "value": 400,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/b/bb/Magic_Clutch_Ring.png",
+        "effect": "Increases magic attack by 15%. Reduces damage absorption by 10.",
+        "description": [
+            "Ring depicting a hand grasping a blue stone. Increases magic attack, but compromises damage absorption.",
+            "An old fable in Londor claims that the lure of the clutch ring reaches out to the crestfallen, who might otherwise be overcome by despair."
+        ]
+    },
+    {
+        "name": "Lightning Clutch Ring",
+        "id": 49,
+        "value": 400,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/4/46/Lightning_Clutch_Ring_%28DSIII%29.png",
+        "effect": "Increases lightning attack by 15%. Reduces damage absorption by 10.",
+        "description": [
+            "Ring depicting a hand grasping a yellow stone. Increases lightning attack, but compromises damage absorption.",
+            "An old fable in Londor claims that the lure of the clutch ring reaches out to the crestfallen, who might otherwise be overcome by despair."
+        ]
+    },
+    {
+        "name": "Fire Clutch Ring",
+        "id": 50,
+        "value": 400,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/db/Fire_Clutch_Ring_%28DSIII%29.png",
+        "effect": "Increases fire attack by 15%. Reduces damage absorption by 10.",
+        "description": [
+            "Ring depicting a hand grasping a red stone. Increases fire attack, but compromises damage absorption.",
+            "An old fable in Londor claims that the lure of the clutch ring reaches out to the crestfallen, who might otherwise be overcome by despair"
+        ]
+    },
+    {
+        "name": "Dark Clutch Ring",
+        "id": 51,
+        "value": 400,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/7/78/Dark_Clutch_Ring_%28DSIII%29.png",
+        "effect": "Increases dark attack by 15%. Reduces damage absorption by 10.",
+        "description": [
+            "Ring depicting a hand grasping a purple stone. Increases dark attack, but compromises damage absorption.",
+            "An old fable in Londor claims the lure of the clutch ring reaches out to the crestfallen, who might otherwise be overcome by despair."
+        ]
+    },
+    {
+        "name": "Red TearStone Ring",
+        "id": 52,
+        "value": 300,
+        "weight": 1.4,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/b/b7/Red_Tearstone_Ring_%28DSIII%29.png",
+        "effect": "Temporarily boosts attack by 20% when HP is below 20%.",
+        "description": [
+            "A ring set with a large rare tearstone jewel. Temporarily boosts attack when HP is low.",
+            "This stone is said to be a tear of mourning of the goddess Caitha, and of course, tears are always more beautiful near death."
+        ]
+    },
+    {
+        "name": "Blue Tearstone Ring",
+        "id": 53,
+        "value": 300,
+        "weight": 1.1,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/2/2f/Blue_Tearstone_Ring_%28DSIII%29.png",
+        "effect": "Boosts damage absorption by 20% when HP is below 20%.",
+        "description": [
+            "A ring set with a large rare tearstone jewel. Temporarily boosts damage absorption when HP is low.",
+            "This stone is said to be a tear of sorrow of the goddess Caitha, and of course, tears are always more beautiful near death."
+        ]
+    },
+    {
+        "name": "Lloyd's Sword Ring",
+        "id": 54,
+        "value": 500,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/e/e8/Lloyd%27s_Sword_Ring.png",
+        "effect": "Boosts attack power by 12.5% when HP is full.",
+        "description": [
+            "Ring given to knights of the Way of White. Depicts Allfather Lloyd's Sword of Law.",
+            "Boosts attack power when HP is full.",
+            "Much time has passed since the worship of Lloyd was common in the Way of White. The clerics of Carim had always strongly asserted that Lloyd was a derivative fraud, and that the Allfather title was self-proclaimed."
+        ]
+    },
+    {
+        "name": "Lloyd's Shield Ring",
+        "id": 55,
+        "value": 500,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/6/68/Lloyd%27s_Shield_Ring.png",
+        "effect": "Boosts damage absorption by 25% when HP is full.",
+        "description": [
+            "Ring given to knights of the Way of White. Depicts Allfather Lloyd's Shield of Caste.",
+            "Boosts damage absorption when HP is full.",
+            "Much time has passed since the worship of Lloyd was common in the Way of White. The clerics of Carim had always strongly asserted that Lloyd was a derivative fraud, and that the Allfather title was self-proclaimed."
+        ]
+    },
+    {
+        "name": "Carthus Milkring",
+        "id": 56,
+        "value": 200,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/9/91/Carthus_Milkring.png",
+        "effect": "Boosts dexterity by 3 and obscures the wearer while rolling.",
+        "description": [
+            "Ring worn by warriors of the sand kingdom, Carthus. Slightly boosts dexterity and obscures the wearer while rolling.",
+            "The sword technique of Carthus allows for fluid movement with a curved sword. Masters of the technique are said to dazzle their opponents by moving as weightlessly as a grain of sand. They live for their High Lord Wolnir, conqueror of most kingdoms known to their people."
+        ]
+    },
+    {
+        "name": "Carthus Bloodring",
+        "id": 57,
+        "value": 500,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/b/bc/Carthus_Bloodring.png",
+        "effect": "Boosts rolling invincibility.",
+        "description": [
+            "Ring worn by warriors of the sand kingdom, Carthus. Boosts rolling invincibility, at the cost of defense.",
+            "The sword technique of Carthus allows for fluid movement with a curved sword. Masters of the technique are said to dazzle their opponents by moving as weightlessly as a grain of sand.",
+            "They live for their High Lord Wolnir, conqueror of most kingdoms known to their people."
+        ]
+    },
+    {
+        "name": "Pontiff's Right Eye",
+        "id": 58,
+        "value": 500,
+        "weight": 1.4,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/6/6b/Pontiff%27s_Right_Eye.png",
+        "effect": "Boosts attacks to a maximum of +10%, as long as attacking persists.",
+        "description": [
+            "Bewitched ring that Pontiff Sulyvahn bestowed upon his knights.",
+            "Boosts attacks, as long as attacking persists.",
+            "Knights who peer into the black orb are lured into battles of death, transformed into frenzied beasts. No wonder the Pontiff only provides these rings to those dispatched to foreign lands."
+        ]
+    },
+    {
+        "name": "Pontiff's Left Eye",
+        "id": 59,
+        "value": 500,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/e/ec/Pontiff%27s_Left_Eye.png",
+        "effect": "Recovers 30 HP with successive attacks.",
+        "description": [
+            "Bewitched ring that Pontiff Sulyvahn bestowed upon his knights.",
+            "Recovers HP with successive attacks.",
+            "Knights who peer into the black orb are lured into battles of death, transformed into frenzied beasts. No wonder the Pontiff only provides these rings to those dispatched to foreign lands."
+        ]
+    },
+    {
+        "name": "Aldrich's Ruby",
+        "id": 60,
+        "value": 600,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/f/f0/Aldrich%27s_Ruby.png",
+        "effect": "Recovers 85 HP from critical attacks.",
+        "description": [
+            "A malformed ring left by Aldrich, Saint of the Deep. Recovers HP from critical attacks.",
+            "Aldrich, infamous for his appetite for flesh, apparently had the desire to share with others his joy of imbibing the final shudders of life while luxuriating in his victim's screams."
+        ]
+    },
+    {
+        "name": "Aldrich's Sapphire",
+        "id": 61,
+        "value": 600,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/df/Aldrich%27s_Sapphire.png",
+        "effect": "Recovers 15 FP from critical attacks.",
+        "description": [
+            "A malformed ring left by Aldrich, Saint of the Deep. Recovers FP from critical attacks.",
+            "Aldrich, infamous for his appetite for flesh, apparently had the desire to share with others his joy of imbibing the final shudders of life while luxuriating in his victim's screams."
+        ]
+    },
+    {
+        "name": "Silvercat Ring",
+        "id": 62,
+        "value": 50,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/d/db/Silvercat_Ring_%28DSIII%29.png",
+        "effect": "Prevents damage from falling.",
+        "description": [
+            "Silver ring depicting a leaping feline. Prevents damage from falling.",
+            "In the Age of Gods, or possibly just following it, an old cat was said to speak a human tongue, with the voice of an old woman, and the form of a fanciful immortal."
+        ]
+    },
+    {
+        "name": "Slumbering Dragoncrest Ring",
+        "id": 63,
+        "value": 1000,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/c/cf/Slumbering_Dragoncrest_Ring_%28DSIII%29.png",
+        "effect": "Silences all sounds made by its wearer.",
+        "description": [
+            "Ring of a clandestine guild of sorcerers based in Vinheim, home of sorcery.",
+            "Masks the sound of its wearer.",
+            "The Dragon School held effective sovereignty over Vinheim, with a great many adept assassins at its disposal."
+        ]
+    },
+    {
+        "name": "Obscuring Ring",
+        "id": 64,
+        "value": 50,
+        "weight": 0.9,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/c/cd/Obscuring_Ring.png",
+        "effect": "Hides the presence of the wearer when far away.",
+        "description": [
+            "Ring bestowed upon the Fingers of Rosaria, invaders who seek tongues for their goddess.",
+            "Hides the presence of the wearer when far away.",
+            "It is said that Rosaria, the mother of rebirth, was robbed of her tongue by her firstborn, and has been waiting for their return ever since."
+        ]
+    },
+    {
+        "name": "Untrue Dark Ring",
+        "id": 65,
+        "value": 400,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/a/ad/Untrue_Dark_Ring.png",
+        "effect": "Retain human appearance while Hollow.",
+        "description": [
+            "One of the illusory rings worn by the Hollows of Londor.",
+            "Retain human appearance while Hollow.",
+            "The Hollows of Londor are wretchedly aged, fraught with deceit, and dubiously secretive. It is no wonder that they are deeply detested."
+        ]
+    },
+    {
+        "name": "Untrue White Ring",
+        "id": 66,
+        "value": 500,
+        "weight": 0.7,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/2/22/Untrue_White_Ring.png",
+        "effect": "Take the appearance of a phantom.",
+        "description": [
+            "One of the illusory rings worn by the Hollows of Londor.",
+            "Take the appearance of a phantom.",
+            "The Hollows of Londor are wretchedly aged, fraught with deceit, and dubiously secretive. It is no wonder that they are deeply detested."
+        ]
+    },
+    {
+        "name": "Reversal Ring",
+        "id": 67,
+        "value": 1000,
+        "weight": 0.5,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/3/31/Reversal_Ring.png",
+        "effect": "Causes males to perform female actions, and vice-versa.",
+        "description": [
+            "A divine ring granted to the Darkmoon Gwyndolin in his youth.",
+            "Causes males to perform female actions, and vice-versa.",
+            "Gwyndolin was raised like a daughter through the aura of the moon, and was said to behave like a sullen brooding goddess."
+        ]
+    },
+    {
+        "name": "Skull Ring",
+        "id": 68,
+        "value": 150,
+        "weight": 0.6,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/3/32/Skull_Ring.png",
+        "effect": "Wearer is easier to be detected by enemies.",
+        "description": [
+            "One of Courland's transposed wonders. Derived from the soul of a Soulfeeder.",
+            "Easier to be detected by enemies.",
+            "The Soulfeeder was a beast that insatiably absorbed souls to feed its own power. Even after its accursed corpse was burned, it is said that the pungent stench of souls left the air permanently stained."
+        ]
+    },
+    {
+        "name": "Calamity Ring",
+        "id": 69,
+        "value": 500,
+        "weight": 0.8,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/e/e0/Calamity_Ring_%28DSIII%29.png",
+        "effect": "Receive double damage.",
+        "description": [
+            "A ring made from the orange eye of a calamitous dragon.",
+            "Receive double damage.",
+            "This ring has no useful powers, and is merely a symbol of dragon worship, a thing quietly passed down amongst its most fervent adherents, some of whom become convinced the task has been bestowed upon them as a sacred duty."
+        ]
+    },
+    {
+        "name": "Ring of Sacrifice",
+        "id": 70,
+        "value": 2000,
+        "weight": 1.0,
+        "imageURL": "https://static.wikia.nocookie.net/darksouls/images/6/6e/Ring_of_Sacrifice_%28DSIII%29.png",
+        "effect": "Wearer will lose no souls upon death, but the ring itself breaks afterward.",
+        "description": [
+            "This mystical ring was created in a sacrificial rite of Velka, the Goddess of Sin.",
+            "Its wearer will lose nothing upon death, but the ring itself breaks.",
+            "A sacrifice is only worth as much as the life it spares."
         ]
     }
 ]

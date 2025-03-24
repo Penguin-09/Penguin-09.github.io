@@ -9,10 +9,11 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: white;
+    color: var(--colorWhite);
     background-color: var(--colorGreyDark);
 }
 
+/* Button */
 a,
 a:hover {
     text-decoration: none;
@@ -28,6 +29,7 @@ a:hover {
     cursor: pointer;
 }
 
+/* Input */
 .customInput {
     transition: transform 0.3s ease;
     border: none;
@@ -40,4 +42,16 @@ a:hover {
 
 .customInput:focus {
     transform: scale(1.1);
+}
+
+/* Store Card */
+.customStoreCard {
+    padding: 10px;
+    border-radius: 15px;
+    width: 24%;
+    text-align: center;
+}
+
+.customStoreCardName {
+    color: var(--colorRed);
 }

@@ -59,9 +59,7 @@
                         class="bi bi-person fs-3 me-1"
                         style="color: var(--colorWhite)"
                     ></i>
-                    <p class="fs-3 m-0" style="color: var(--colorWhite)">
-                        About
-                    </p>
+                    <p class="fs-3 m-0">About</p>
                 </a>
             </div>
         </div>
@@ -99,7 +97,7 @@
                     class="fs-2"
                     style="color: rgba(255, 255, 255, 0.5); max-width: 450px"
                 >
-                    The online webshop for the best magical rings Lordran has to
+                    The online webshop for the best magical rings Lothric has to
                     offer
                 </p>
             </div>
@@ -129,13 +127,10 @@
         <!-- DESCRIPTION -->
         <div class="d-flex flex-column align-items-center p-3">
             <p class="fs-1 m-0" style="color: var(--colorRed)">
-                The best webshop in Lordran
+                The best webshop in Lothric
             </p>
 
-            <p
-                class="fs-4 m-0 text-center col-lg-8"
-                style="color: var(--colorWhite)"
-            >
+            <p class="fs-4 m-0 text-center col-lg-8">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -147,11 +142,18 @@
         </div>
 
         <!-- STORE NAVIGATION -->
-        <div class="d-flex justify-content-center align-items-center p-3">
+        <div
+            class="d-flex justify-content-center align-items-center p-3 sticky-top"
+            style="background-color: var(--colorGreyDark)"
+        >
+            <!-- Search -->
             <div class="d-flex">
                 <input
-                    class="customInput fs-4 p-1"
-                    style="background-color: var(--colorGreyLighter); color: var(--colorWhite);"
+                    class="customInput fs-4 p-1 me-1"
+                    style="
+                        background-color: var(--colorGreyLighter);
+                        color: var(--colorWhite);
+                    "
                     type="text"
                     placeholder="Search"
                 />
@@ -167,18 +169,29 @@
                 </button>
             </div>
 
-            <div class="position-absolute" style="right: 20px">
-                <!-- Cart -->
+            <!-- Cart -->
+            <div class="position-absolute" style="left: 20px">
                 <a class="customHover d-flex" href="#">
                     <i
                         class="bi bi-cart fs-3 me-1"
                         style="color: var(--colorWhite)"
                     ></i>
-                    <p class="fs-3 m-0" style="color: var(--colorWhite)">
-                        Cart
-                    </p>
+                    <p class="fs-3 m-0">Cart</p>
                 </a>
             </div>
         </div>
+
+        <!-- STORE -->
+        <div
+            class="d-flex justify-content-between flex-wrap p-3 gap-3"
+            style="
+                background-image: linear-gradient(
+                    to top right,
+                    var(--colorRedDark),
+                    var(--colorGreyLight)
+                );
+            "
+            id="storeElement"
+        ></div>
     </body>
 </html>
