@@ -83,6 +83,8 @@ function printStoreCards(data, offSet = 0, limit = 16) {
     }
 
     for (let i = offSet; i < length; i++) {
+        pointer++;
+
         // Store Card Element
         let cardElement = document.createElement("div");
         cardElement.classList.add(
@@ -151,6 +153,8 @@ function printStoreCards(data, offSet = 0, limit = 16) {
     }
 }
 
+let pointer = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
     try {
         getRingData().then((data) => {
@@ -165,7 +169,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
                 });
 
-            
+            window.addEventListener("scroll", () => {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const pageHeight = document.body.scrollHeight;
+
+                if (pageHeight - scrollPosition < 100) {
+                    printStoreCards(data, pointer);
+                }
+            });
         });
     } catch (error) {
         console.error("Error caught: ", error);
