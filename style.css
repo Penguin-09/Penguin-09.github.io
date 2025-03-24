@@ -111,7 +111,6 @@ a:hover {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    background-color: rgba(31, 31, 31, 0.8);
     border-radius: 8px;
     padding: 8px;
     margin-top: 5px;
