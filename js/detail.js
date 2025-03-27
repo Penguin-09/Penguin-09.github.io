@@ -33,6 +33,9 @@ async function getRingData() {
  * @param {int} id ring ID
  */
 function printRingInfo(data, id) {
+    // Page name
+    document.title = data[id].name;
+
     // Title
     let title = document.getElementById("title");
     title.innerText = data[id].name;
@@ -59,6 +62,14 @@ function printRingInfo(data, id) {
         line1.innerText = data[id].description[1];
         line2.innerText = data[id].description[2];
     }
+
+    // Weight
+    let weight = document.getElementById("weight");
+    weight.innerText = data[id].weight + " units";
+
+    // Value
+    let value = document.getElementById("souls");
+    value.innerText = data[id].value + " souls";
 }
 
 const id = getIdFromUrl();

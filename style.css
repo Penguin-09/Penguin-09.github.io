@@ -158,8 +158,3 @@ a:hover {
 .customDetailRing:hover {
     transform: scale(1.3);
 }
-
-#image {
-    opacity: 0;
-    animation: popIn 0.8s ease forwards;
-}
