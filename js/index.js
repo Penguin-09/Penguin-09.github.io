@@ -18,6 +18,10 @@ async function getRingData() {
     return data;
 }
 
+/**
+ * Search for rings that contain the user input in their name
+ * @param {*} userInput The search query that was inputted by the user
+ */
 function searchContains(userInput) {
     getRingData().then((data) => {
         const result = data.filter((ring) => {
@@ -29,6 +33,9 @@ function searchContains(userInput) {
     });
 }
 
+/**
+ * Clear the store of all ring cards to print new data
+ */
 function clearStore() {
     document.getElementById("storeElement").innerHTML = "";
     console.log("Store element cleared");
@@ -86,7 +93,8 @@ function printStoreCards(data, offSet = 0, limit = 16) {
         pointer++;
 
         // Store Card Element
-        let cardElement = document.createElement("div");
+        let cardElement = document.createElement("a");
+        cardElement.href = "detail.html#" + data[i].id;
         cardElement.classList.add(
             "customStoreCard",
             "col-12",
@@ -161,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             printHeroRings(data);
             printStoreCards(data);
 
+            // Search button
             document
                 .getElementById("searchButton")
                 .addEventListener("click", () => {
@@ -169,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
                 });
 
+            // Infinite scroll
             window.addEventListener("scroll", () => {
                 const scrollPosition = window.scrollY + window.innerHeight;
                 const pageHeight = document.body.scrollHeight;
@@ -176,6 +186,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (pageHeight - scrollPosition < 100) {
                     printStoreCards(data, pointer);
                 }
+            });
+
+            // Scroll to element button
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const offset = 70;
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - offset,
+                        behavior: "smooth",
+                    });
+                });
             });
         });
     } catch (error) {
