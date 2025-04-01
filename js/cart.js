@@ -10,7 +10,7 @@ async function getRingData() {
         const dataJson = await response.json();
         localStorage.setItem("rings", JSON.stringify(dataJson));
         data = dataJson;
-        console.log("Ring data succesfully retrieved");
+        console.log("Ring data successfully retrieved");
     } else {
         data = JSON.parse(data);
     }

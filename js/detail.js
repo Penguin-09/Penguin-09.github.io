@@ -12,19 +12,24 @@ function getIdFromUrl() {
  * @returns ring data
  */
 async function getRingData() {
-    let data = localStorage.getItem("rings");
+    try {
+        let data = localStorage.getItem("rings");
 
-    if (!data) {
-        const response = await fetch("./rings.json");
-        const dataJson = await response.json();
-        localStorage.setItem("rings", JSON.stringify(dataJson));
-        data = dataJson;
-        console.log("Ring data succesfully retrieved");
-    } else {
-        data = JSON.parse(data);
+        if (!data) {
+            const response = await fetch("./rings.json");
+            const dataJson = await response.json();
+            localStorage.setItem("rings", JSON.stringify(dataJson));
+            data = dataJson;
+            console.log("Ring data succesfully retrieved");
+        } else {
+            data = JSON.parse(data);
+        }
+
+        return data;
+    } catch (error) {
+        console.error("Error fetching ring data: ", error);
+        return [];
     }
-
-    return data;
 }
 
 /**
@@ -98,7 +103,7 @@ function changeCartState() {
 
 /**
  * Show the success alert for a few seconds
- * @param {*} isInCart Wether the ring is in the cart or not
+ * @param {*} isInCart Whether the ring is in the cart or not
  */
 async function showAlert(isInCart) {
     let alert = document.getElementById("alert");
@@ -133,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         getRingData().then((data) => {
             printRingInfo(data, id);
 
-            // Change cart button text if neccesary
+            // Change cart button text if necessary
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             let cartButtonText = document.getElementById("cartButtonText");
 

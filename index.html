@@ -24,7 +24,6 @@
             type="image/x-icon"
         />
         <link rel="stylesheet" href="style.css" />
-        <script src="js/index.js" defer></script>
     </head>
     <body>
         <!-- HEADER -->
@@ -55,9 +54,8 @@
                 <a class="customHover d-flex" href="index.html#home">
                     <i
                         class="bi bi-house fs-3 me-1"
-                        style="color: var(--colorRed)"
                     ></i>
-                    <p class="fs-3 m-0" style="color: var(--colorRed)">Home</p>
+                    <p class="fs-3 m-0">Home</p>
                 </a>
 
                 <!-- About -->
@@ -159,7 +157,7 @@
             <!-- Search -->
             <form class="d-flex" style="z-index: 10" id="form">
                 <input
-                    class="customInput fs-4 me-1"
+                    class="customInput fs-4 me-1 p-2"
                     style="
                         background-color: var(--colorGreyLighter);
                         color: var(--colorWhite);
@@ -187,7 +185,14 @@
                         class="bi bi-cart fs-3 me-1"
                         style="color: var(--colorWhite)"
                     ></i>
-                    <p class="fs-3 m-0">Cart</p>
+                    <p class="d-flex fs-3 m-0">
+                        Cart<span
+                            class="fs-5 ms-1"
+                            style="color: var(--colorRed)"
+                            id="cartCount"
+                            >0</span
+                        >
+                    </p>
                 </a>
             </div>
         </div>
@@ -211,5 +216,7 @@
                 &copy; 2025 Son Bram van der Burg
             </p>
         </div>
+
+        <script src="js/index.js"></script>
     </body>
 </html>

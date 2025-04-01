@@ -14,8 +14,7 @@ body {
 }
 
 /* Button */
-a,
-a:hover {
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -36,15 +35,8 @@ a:hover {
     border-radius: 0.375rem;
 }
 
-.customInput:hover {
-    cursor: text;
-}
-
-.customInput:focus {
-    transform: scale(1.1);
-}
-
-/* Hero Rings */
+/* HERO RINGS */
+/* Animation for hero ring pop-in effect */
 @keyframes popIn {
     0% {
         opacity: 0;
@@ -78,14 +70,19 @@ a:hover {
     animation-delay: 0.2s;
 }
 
-/* Store Card */
+/* STORE */
 .customStoreCard {
+    /* Layout and positioning */
     text-align: center;
     margin-top: 35px;
     padding-left: 15px;
     padding-right: 15px;
-    text-shadow: #1f1f1f 0px 0px 10px;
     position: relative;
+
+    /* Visual effects */
+    text-shadow: #1f1f1f 0px 0px 10px;
+
+    /* Interaction and animation */
     transition: transform 0.3s ease;
 }
 
@@ -152,7 +149,8 @@ a:hover {
     margin: 0px;
 }
 
-/* Detail Page */
+/* DETAIL PAGE */
+/* The ring element on the detail page with hover scaling effect */
 .customDetailRing {
     transition: transform 0.3s ease;
 }

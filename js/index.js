@@ -175,6 +175,14 @@ function printStoreCards(data, offSet = 0, limit = 16) {
     }
 }
 
+/**
+ * Print the amount of rings in the cart
+ */
+function printCartCount() {
+    let cartCount = document.getElementById("cartCount");
+    cartCount.innerText = cart.length;
+}
+
 let searchActive = false;
 let pointer = 0;
 
@@ -192,6 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
         getRingData().then((data) => {
             printHeroRings(data);
             printStoreCards(data);
+            printCartCount(cart);
 
             // Search button
             document
