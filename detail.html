@@ -167,14 +167,31 @@
                             background: none;
                             border: none;
                         "
+                        onclick="changeCartState()"
                     >
                         <i
                             class="bi bi-cart fs-3 me-1"
                             style="color: var(--colorRed)"
                         ></i>
-                        <p class="fs-3 m-0">Add to Cart</p>
+                        <p class="fs-3 m-0" id="cartButtonText">Add to Cart</p>
                     </button>
                 </div>
+            </div>
+
+            <!-- Alert -->
+            <div
+                class="alert d-flex align-items-center position-absolute p-3 fs-4"
+                style="
+                    bottom: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--colorRed);
+                "
+                role="alert"
+                id="alert"
+            >
+                <i class="bi bi-check-lg me-1"></i>
+                <p class="m-0" id="alertText">Ring added to cart!</p>
             </div>
         </div>
     </body>

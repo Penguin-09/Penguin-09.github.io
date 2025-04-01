@@ -2,20 +2,33 @@
  * Fetch data from Json if needed
  * @returns ring data
  */
-async function getRingData() {
-    let data = localStorage.getItem("rings");
+async function getRingData(userInput = "") {
+    try {
+        let data = localStorage.getItem("rings");
 
-    if (!data) {
-        const response = await fetch("./rings.json");
-        const dataJson = await response.json();
-        localStorage.setItem("rings", JSON.stringify(dataJson));
-        data = dataJson;
-        console.log("Ring data succesfully retrieved");
-    } else {
-        data = JSON.parse(data);
+        if (!data) {
+            const response = await fetch("./rings.json");
+            const dataJson = await response.json();
+            localStorage.setItem("rings", JSON.stringify(dataJson));
+            data = dataJson;
+            console.log("Ring data succesfully retrieved");
+        } else {
+            data = JSON.parse(data);
+        }
+
+        if (searchActive === true) {
+            data = data.filter((ring) => {
+                return ring.name
+                    .toLowerCase()
+                    .includes(userInput.toLowerCase());
+            });
+        }
+
+        return data;
+    } catch (error) {
+        console.error("Error fetching ring data: ", error);
+        return [];
     }
-
-    return data;
 }
 
 /**
@@ -23,13 +36,12 @@ async function getRingData() {
  * @param {*} userInput The search query that was inputted by the user
  */
 function searchContains(userInput) {
-    getRingData().then((data) => {
-        const result = data.filter((ring) => {
-            return ring.name.toLowerCase().includes(userInput.toLowerCase());
-        });
+    searchActive = true;
 
+    getRingData(userInput).then((data) => {
         clearStore();
-        printStoreCards(result);
+        pointer = 0;
+        printStoreCards(data, pointer);
     });
 }
 
@@ -82,12 +94,16 @@ function printStoreCards(data, offSet = 0, limit = 16) {
 
     if (data.length === 0) {
         console.error("No data to print");
-        // FIX NOW
     }
 
     if (data.length < length) {
         length = data.length;
     }
+
+    const priceImageURL =
+        "https://static.wikia.nocookie.net/darksouls/images/7/78/Soul_of_an_Old_Hand.png";
+    const weightImageURL =
+        "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/icon_weight.png";
 
     for (let i = offSet; i < length; i++) {
         pointer++;
@@ -128,8 +144,7 @@ function printStoreCards(data, offSet = 0, limit = 16) {
         priceDivElement.classList.add("customStoreCardPrice");
 
         let priceImageElement = document.createElement("img");
-        priceImageElement.src =
-            "https://static.wikia.nocookie.net/darksouls/images/7/78/Soul_of_an_Old_Hand.png";
+        priceImageElement.src = priceImageURL;
         priceImageElement.alt = "souls";
         priceDivElement.appendChild(priceImageElement);
 
@@ -144,8 +159,7 @@ function printStoreCards(data, offSet = 0, limit = 16) {
         weightDivElement.classList.add("customStoreCardWeight");
 
         let weightImageElement = document.createElement("img");
-        weightImageElement.src =
-            "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/icon_weight.png";
+        weightImageElement.src = weightImageURL;
         weightImageElement.alt = "weight";
         weightDivElement.appendChild(weightImageElement);
 
@@ -161,7 +175,17 @@ function printStoreCards(data, offSet = 0, limit = 16) {
     }
 }
 
+let searchActive = false;
 let pointer = 0;
+
+let cart = localStorage.getItem("cart");
+
+if (!cart) {
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+} else {
+    cart = JSON.parse(cart);
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     try {
@@ -171,8 +195,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Search button
             document
-                .getElementById("searchButton")
-                .addEventListener("click", () => {
+                .getElementById("form")
+                .addEventListener("submit", (event) => {
+                    event.preventDefault();
                     searchContains(
                         document.getElementById("searchInput").value
                     );
@@ -184,7 +209,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 const pageHeight = document.body.scrollHeight;
 
                 if (pageHeight - scrollPosition < 100) {
-                    printStoreCards(data, pointer);
+                    if (searchActive === true) {
+                        getRingData(
+                            document.getElementById("searchInput").value
+                        ).then((data) => {
+                            printStoreCards(data, pointer);
+                        });
+                    } else {
+                        printStoreCards(data, pointer);
+                    }
                 }
             });
 
