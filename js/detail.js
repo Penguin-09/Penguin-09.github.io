@@ -111,14 +111,24 @@ async function showAlert(isInCart) {
 
     if (isInCart) {
         alertText.textContent = "Ring added to cart!";
+        printCartCount();
     } else {
         alertText.textContent = "Ring removed from cart!";
+        printCartCount();
     }
 
     // Display for a determined time
     alert.classList.add("show");
     await sleep(2000);
     alert.classList.remove("show");
+}
+
+/**
+ * Print the amount of rings in the cart
+ */
+function printCartCount() {
+    let cartCount = document.getElementById("cartCount");
+    cartCount.innerText = cart.length;
 }
 
 /**
@@ -137,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
         getRingData().then((data) => {
             printRingInfo(data, id);
+            printCartCount();
 
             // Change cart button text if necessary
             let cart = JSON.parse(localStorage.getItem("cart")) || [];

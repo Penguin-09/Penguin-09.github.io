@@ -107,12 +107,21 @@ function printCart(data) {
     }
 }
 
+/**
+ * Print the amount of rings in the cart
+ */
+function printCartCount() {
+    let cartCount = document.getElementById("cartCount");
+    cartCount.innerText = cart.length;
+}
+
 const cart = localStorage.getItem("cart");
 
 document.addEventListener("DOMContentLoaded", function () {
     try {
         getRingData().then((data) => {
             printCart(data);
+            printCartCount(data);
         });
     } catch (error) {
         console.error("Error caught: ", error);

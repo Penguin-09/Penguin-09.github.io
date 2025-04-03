@@ -1,6 +1,10 @@
 /**
+ * @typedef {Object} Ring
+ */
+
+/**
  * Fetch data from Json if needed
- * @returns ring data
+ * @returns {Array<Ring>} ring data
  */
 async function getRingData(userInput = "") {
     try {
@@ -16,7 +20,7 @@ async function getRingData(userInput = "") {
             data = JSON.parse(data);
         }
 
-        if (searchActive === true) {
+        if (searchActive) {
             data = data.filter((ring) => {
                 return ring.name
                     .toLowerCase()
