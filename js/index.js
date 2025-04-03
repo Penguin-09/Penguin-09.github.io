@@ -54,6 +54,20 @@ function clearStore() {
 }
 
 /**
+ * Clear the search and print all rings again
+ */
+function clearSearch() {
+    searchActive = false;
+
+    getRingData().then((data) => {
+        clearStore();
+        document.getElementById("searchInput").value = "";
+        pointer = 0;
+        printStoreCards(data, pointer);
+    });
+}
+
+/**
  * Retrieve 3 random rings from the json and print them on the hero section
  * @param {*} data The ring data from the json file
  */
@@ -210,6 +224,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     searchContains(
                         document.getElementById("searchInput").value
                     );
+                });
+
+            // Clear button
+            document
+                .getElementById("clearButton")
+                .addEventListener("click", () => {
+                    clearSearch();
                 });
 
             // Infinite scroll

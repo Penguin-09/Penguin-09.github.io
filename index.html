@@ -52,9 +52,7 @@
             >
                 <!-- Home -->
                 <a class="customHover d-flex" href="index.html#home">
-                    <i
-                        class="bi bi-house fs-3 me-1"
-                    ></i>
+                    <i class="bi bi-house fs-3 me-1"></i>
                     <p class="fs-3 m-0">Home</p>
                 </a>
 
@@ -154,29 +152,44 @@
             style="background-color: var(--colorGreyDark); z-index: 1"
             id="storeNavigation"
         >
-            <!-- Search -->
-            <form class="d-flex" style="z-index: 10" id="form">
-                <input
-                    class="customInput fs-4 me-1 p-2"
-                    style="
-                        background-color: var(--colorGreyLighter);
-                        color: var(--colorWhite);
-                    "
-                    id="searchInput"
-                    type="text"
-                    placeholder="Search"
-                />
+            <div class="d-flex">
+                <!-- Search -->
+                <form class="d-flex" style="z-index: 10" id="form">
+                    <input
+                        class="customInput fs-4 me-1 p-2"
+                        style="
+                            background-color: var(--colorGreyLighter);
+                            color: var(--colorWhite);
+                        "
+                        id="searchInput"
+                        type="text"
+                        placeholder="Search"
+                    />
+                    <button
+                        class="btn customHover d-flex"
+                        style="background-color: var(--colorRed)"
+                        type="submit"
+                    >
+                        <i
+                            class="bi bi-search fs-3 me-1"
+                            style="color: var(--colorWhite)"
+                        ></i>
+                    </button>
+                </form>
+
+                <!-- Clear -->
                 <button
-                    class="btn customHover d-flex"
-                    style="background-color: var(--colorRed)"
-                    type="submit"
+                    class="fs-3 ms-3 px-2 rounded customHover"
+                    style="
+                        background-color: var(--colorGreyDark);
+                        color: var(--colorWhite);
+                        border: none;
+                    "
+                    id="clearButton"
                 >
-                    <i
-                        class="bi bi-search fs-3 me-1"
-                        style="color: var(--colorWhite)"
-                    ></i>
+                    <i class="bi bi-trash me-1"></i>Clear
                 </button>
-            </form>
+            </div>
 
             <!-- Cart -->
             <div class="position-absolute" style="left: 20px">
