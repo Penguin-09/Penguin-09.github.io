@@ -31,7 +31,7 @@ function printCart(data) {
     if (data.length === 0) {
         console.error("No data to print");
         cartElement.innerHTML =
-            "<p class='display-6 pt-5'>Your cart is empty!</p>";
+            "<p class='display-6 d-flex align-items-center'>Your cart is empty!</p>";
     }
 
     const priceImageURL =

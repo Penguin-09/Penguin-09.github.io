@@ -28,38 +28,35 @@
     <body>
         <!-- HEADER -->
         <div
-            class="d-flex justify-content-between p-3 position-absolute t-0"
+            class="d-flex justify-content-between p-3 sticky-top"
             style="background-color: var(--colorGreyDark); width: 100%"
         >
-            <div class="d-flex flex-column flex-md-row gap-4">
-                <!-- Title -->
-                <a
-                    class="customHover d-flex align-items-center"
-                    href="index.html"
-                >
-                    <img
-                        class="fs-3 me-2"
-                        style="height: 1.3em"
-                        src="images/logo.png"
-                        alt="logo"
-                    />
-                    <p class="fs-3 m-0" style="color: var(--colorRed)">
-                        Hollow's Hoard
-                    </p>
-                </a>
-                <a
-                    class="customHover d-flex align-items-center"
-                    href="index.html#storeNavigation"
-                >
-                    <i
-                        class="bi bi-arrow-left fs-3 me-1"
-                        style="color: var(--colorWhite)"
-                    ></i>
-                    <p class="fs-3 m-0" style="color: var(--colorWhite)">
-                        Back to Store
-                    </p>
-                </a>
-            </div>
+            <!-- Title -->
+            <a class="customHover d-flex align-items-center" href="index.html">
+                <img
+                    class="fs-3 me-2"
+                    style="height: 1.3em"
+                    src="images/logo.png"
+                    alt="logo"
+                />
+                <p class="fs-3 m-0" style="color: var(--colorRed)">
+                    Hollow's Hoard
+                </p>
+            </a>
+
+            <!-- Back -->
+            <a
+                class="customHover d-flex align-items-center"
+                href="index.html#storeNavigation"
+            >
+                <i
+                    class="bi bi-arrow-left fs-3 me-1"
+                    style="color: var(--colorWhite)"
+                ></i>
+                <p class="fs-3 m-0" style="color: var(--colorWhite)">
+                    Back to Store
+                </p>
+            </a>
 
             <div
                 class="d-flex flex-column flex-md-row gap-4 justify-content-end"
@@ -70,48 +67,52 @@
                         class="bi bi-house fs-3 me-1"
                         style="color: var(--colorWhite)"
                     ></i>
-                    <p class="fs-3 m-0">
-                        Home
-                    </p>
+                    <p class="fs-3 m-0">Home</p>
                 </a>
 
-                <!-- About -->
-                <a class="customHover d-flex" href="index.html#about">
+                <!-- Cart -->
+                <a class="customHover d-flex" href="cart.html">
                     <i
-                        class="bi bi-person fs-3 me-1"
+                        class="bi bi-cart fs-3 me-1"
                         style="color: var(--colorWhite)"
                     ></i>
-                    <p class="fs-3 m-0">About</p>
+                    <p class="d-flex fs-3 m-0">
+                        Cart<span
+                            class="fs-5 ms-1"
+                            style="color: var(--colorRed)"
+                            id="cartCount"
+                            >0</span
+                        >
+                    </p>
                 </a>
             </div>
         </div>
 
-        <div style="height: 70px"></div>
-
         <!-- MAIN -->
         <div
-            class="d-flex p-4"
+            class="d-flex justify-content-center p-4"
             style="
-                height: calc(100vh - 70px);
+                min-height: 100vh;
                 background-image: linear-gradient(
                     to top left,
                     var(--colorRedDark),
-                    var(--colorGreyLight)
+                    var(--colorGreyLighter)
                 );
             "
         >
             <div
-                class="col-lg-8 d-flex justify-content-center align-items-center flex-column"
+                class="d-flex align-items-center flex-column col-lg-6 p-4"
+                style="
+                    background-color: var(--colorGreyDark);
+                    height: min-content;
+                "
             >
                 <!-- Title -->
                 <p
-                    class="display-3 m-0 text-center"
+                    class="display-4 m-0 text-center"
                     style="color: var(--colorRed)"
                     id="title"
                 ></p>
-
-                <!-- Image -->
-                <img class="customDetailRing" style="width: 25em" id="image" alt="Detail ring image" />
 
                 <!-- Effect -->
                 <p
@@ -119,41 +120,44 @@
                     style="color: var(--colorWhite)"
                     id="effect"
                 ></p>
-            </div>
 
-            <!-- INFO -->
-            <div
-                class="d-flex justify-content-between flex-column col-lg-4 p-4"
-                style="background-color: var(--colorGreyDark)"
-            >
-                <div>
-                    <div id="description">
-                        <div class="fs-5 mb-4">
-                            <i class="bi bi-quote"></i> <span id="line0"></span>
-                        </div>
+                <!-- Image -->
+                <img
+                    class="customDetailRing"
+                    style="width: 25em"
+                    id="image"
+                    alt="Detail ring image"
+                />
 
-                        <div class="fs-5" id="line1"></div>
-
-                        <div class="fs-5 mt-4">
-                            <span id="line2"></span> <i class="bi bi-quote"></i>
-                        </div>
+                <!-- Description -->
+                <div id="description">
+                    <div class="fs-5 mb-4">
+                        <i class="bi bi-quote"></i> <span id="line0"></span>
                     </div>
 
-                    <div>
-                        <div class="fs-5 mt-4 ms-1">
-                            <img
-                                style="width: 1.5em"
-                                src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/weight_dark_souls.jpg"
-                            />
-                            <span id="weight"></span>
-                        </div>
+                    <div class="fs-5" id="line1"></div>
 
-                        <div class="fs-5 mt-2">
-                            <img
-                                style="width: 2em"
-                                src="https://static.wikia.nocookie.net/darksouls/images/7/78/Soul_of_an_Old_Hand.png"
-                            /><span id="souls"></span>
-                        </div>
+                    <div class="fs-5 mt-4">
+                        <span id="line2"></span> <i class="bi bi-quote"></i>
+                    </div>
+                </div>
+
+                <div
+                    class="d-flex justify-content-center align-items-center p-3 gap-5"
+                >
+                    <div class="fs-5">
+                        <img
+                            style="width: 1.5em"
+                            src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/weight_dark_souls.jpg"
+                        />
+                        <span id="weight"></span>
+                    </div>
+
+                    <div class="fs-5">
+                        <img
+                            style="width: 2em"
+                            src="https://static.wikia.nocookie.net/darksouls/images/7/78/Soul_of_an_Old_Hand.png"
+                        /><span id="souls"></span>
                     </div>
                 </div>
 
@@ -179,12 +183,13 @@
 
             <!-- Alert -->
             <div
-                class="alert d-flex align-items-center position-absolute p-3 fs-4"
+                class="alert d-flex align-items-center position-fixed p-3 fs-4"
                 style="
-                    bottom: 0px;
+                    bottom: 100px;
                     left: 50%;
                     transform: translateX(-50%);
                     background-color: var(--colorRed);
+                    z-index: 1050;
                 "
                 role="alert"
                 id="alert"

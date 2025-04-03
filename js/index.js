@@ -108,6 +108,8 @@ function printStoreCards(data, offSet = 0, limit = 16) {
 
     if (data.length === 0) {
         console.error("No data to print");
+        storeElement.innerHTML =
+            "<p class='display-6 d-flex align-items-center py-5'>No rings found</p>";
     }
 
     if (data.length < length) {

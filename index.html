@@ -51,18 +51,25 @@
                 class="d-flex flex-column flex-md-row gap-4 justify-content-end"
             >
                 <!-- Home -->
-                <a class="customHover d-flex" href="index.html#home">
+                <a class="customHover d-flex" style="color: var(--colorRed);" href="index.html#home">
                     <i class="bi bi-house fs-3 me-1"></i>
                     <p class="fs-3 m-0">Home</p>
                 </a>
 
-                <!-- About -->
-                <a class="customHover d-flex" href="index.html#about">
+                <!-- Cart -->
+                <a class="customHover d-flex" href="cart.html">
                     <i
-                        class="bi bi-person fs-3 me-1"
+                        class="bi bi-cart fs-3 me-1"
                         style="color: var(--colorWhite)"
                     ></i>
-                    <p class="fs-3 m-0">About</p>
+                    <p class="d-flex fs-3 m-0">
+                        Cart<span
+                            class="fs-5 ms-1"
+                            style="color: var(--colorRed)"
+                            id="cartCount"
+                            >0</span
+                        >
+                    </p>
                 </a>
             </div>
         </div>
@@ -74,7 +81,7 @@
                 background-image: linear-gradient(
                     to top left,
                     var(--colorRedDark),
-                    var(--colorGreyLight)
+                    var(--colorGreyLighter)
                 );
             "
             id="home"
@@ -148,7 +155,7 @@
 
         <!-- STORE NAVIGATION -->
         <div
-            class="d-flex justify-content-center align-items-center p-2 sticky-top"
+            class="d-flex align-items-center p-2 sticky-top"
             style="background-color: var(--colorGreyDark); z-index: 1"
             id="storeNavigation"
         >
@@ -190,24 +197,6 @@
                     <i class="bi bi-trash me-1"></i>Clear
                 </button>
             </div>
-
-            <!-- Cart -->
-            <div class="position-absolute" style="left: 20px">
-                <a class="customHover d-flex" href="cart.html">
-                    <i
-                        class="bi bi-cart fs-3 me-1"
-                        style="color: var(--colorWhite)"
-                    ></i>
-                    <p class="d-flex fs-3 m-0">
-                        Cart<span
-                            class="fs-5 ms-1"
-                            style="color: var(--colorRed)"
-                            id="cartCount"
-                            >0</span
-                        >
-                    </p>
-                </a>
-            </div>
         </div>
 
         <!-- STORE -->
@@ -217,7 +206,7 @@
                 background-image: linear-gradient(
                     to top right,
                     var(--colorRedDark),
-                    var(--colorGreyLight)
+                    var(--colorGreyLighter)
                 );
             "
             id="storeElement"
