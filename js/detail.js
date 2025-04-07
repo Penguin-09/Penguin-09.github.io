@@ -122,7 +122,7 @@ async function showAlert(isInCart) {
 
     // Display for a determined time
     alert.classList.add("show");
-    await sleep(2000);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     alert.classList.remove("show");
 }
 
@@ -133,15 +133,6 @@ function printCartCount() {
     let cartCount = document.getElementById("cartCount");
     cartCount.innerText = cart.length;
     console.debug("Cart count printed: " + cart.length);
-}
-
-/**
- * Wait for a determined amount of time
- * @param {*} ms milliseconds to sleep
- * @returns void
- */
-function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 const id = parseInt(getIdFromUrl());
@@ -156,20 +147,21 @@ if (!cart) {
     cart = JSON.parse(cart);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    try {
-        getRingData().then((data) => {
-            printRingInfo(data, id);
-            printCartCount();
+try {
+    getRingData().then((data) => {
+        printRingInfo(data, id);
+        printCartCount();
 
-            // Change cart button text if necessary
-            let cartButtonText = document.getElementById("cartButtonText");
+        // Change cart button text if necessary
+        let cartButtonText = document.getElementById("cartButtonText");
 
-            if (cart.includes(id)) {
-                cartButtonText.textContent = "Remove from Cart";
-            }
-        });
-    } catch (error) {
-        console.error("Error caught: ", error);
-    }
-});
+        if (cart.includes(id)) {
+            cartButtonText.textContent = "Remove from Cart";
+        }
+
+        const cartButton = document.getElementById("cartButton");
+        cartButton.addEventListener("click", changeCartState);
+    });
+} catch (error) {
+    console.error("Error caught: ", error);
+}

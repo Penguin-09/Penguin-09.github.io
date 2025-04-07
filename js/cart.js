@@ -18,9 +18,7 @@ async function getRingData() {
         console.debug("Ring data retrieved from local storage");
     }
 
-    data = data.filter((ring) => {
-        return cart.includes(ring.id);
-    });
+    data = data.filter((ring) => cart.includes(ring.id));
     console.debug("Ring data filtered by cart");
 
     return data;
@@ -64,13 +62,11 @@ if (!cart) {
     cart = JSON.parse(cart);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    try {
-        getRingData().then((data) => {
-            printCart(data);
-            printCartCount(data);
-        });
-    } catch (error) {
-        console.error("Error caught: ", error);
-    }
-});
+try {
+    getRingData().then((data) => {
+        printCart(data);
+        printCartCount(data);
+    });
+} catch (error) {
+    console.error("Error caught: ", error);
+}

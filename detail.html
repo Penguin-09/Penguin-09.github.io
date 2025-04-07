@@ -24,6 +24,7 @@
             type="image/x-icon"
         />
         <link rel="stylesheet" href="style.css" />
+        <script src="js/detail.js" defer></script>
     </head>
     <body>
         <!-- HEADER -->
@@ -170,7 +171,7 @@
                             background: none;
                             border: none;
                         "
-                        onclick="changeCartState()"
+                        id="cartButton"
                     >
                         <i
                             class="bi bi-cart fs-3 me-1"
@@ -198,7 +199,5 @@
                 <p class="m-0" id="alertText">Ring added to cart!</p>
             </div>
         </div>
-
-        <script src="js/detail.js"></script>
     </body>
 </html>

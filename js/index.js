@@ -150,51 +150,43 @@ if (!cart) {
     cart = JSON.parse(cart);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    getRingData()
-        .then((data) => {
-            printHeroRings(data);
-            printStoreCards(data);
-            printCartCount(cart);
+getRingData()
+    .then((data) => {
+        printHeroRings(data);
+        printStoreCards(data);
+        printCartCount(cart);
 
-            // Search button
-            document
-                .getElementById("form")
-                .addEventListener("submit", (event) => {
-                    event.preventDefault();
-                    searchContains(
-                        document.getElementById("searchInput").value
-                    );
-                });
-
-            // Clear button
-            document
-                .getElementById("clearButton")
-                .addEventListener("click", () => {
-                    clearSearch();
-                });
-
-            // Infinite scroll
-            window.addEventListener("scroll", () => {
-                const scrollPosition = window.scrollY + window.innerHeight;
-                const pageHeight = document.body.scrollHeight;
-
-                if (pageHeight - scrollPosition < 100) {
-                    console.debug("Bottom of the page reached");
-
-                    if (searchActive) {
-                        getRingData(
-                            document.getElementById("searchInput").value
-                        ).then((data) => {
-                            printStoreCards(data, pointer);
-                        });
-                    } else {
-                        printStoreCards(data, pointer);
-                    }
-                }
-            });
-        })
-        .catch((error) => {
-            console.error("Error retrieving ring data: ", error);
+        // Search button
+        document.getElementById("form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            searchContains(document.getElementById("searchInput").value);
         });
-});
+
+        // Clear button
+        document.getElementById("clearButton").addEventListener("click", () => {
+            clearSearch();
+        });
+
+        // Infinite scroll
+        window.addEventListener("scroll", () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const pageHeight = document.body.scrollHeight;
+
+            if (pageHeight - scrollPosition < 100) {
+                console.debug("Bottom of the page reached");
+
+                if (searchActive) {
+                    getRingData(
+                        document.getElementById("searchInput").value
+                    ).then((data) => {
+                        printStoreCards(data, pointer);
+                    });
+                } else {
+                    printStoreCards(data, pointer);
+                }
+            }
+        });
+    })
+    .catch((error) => {
+        console.error("Error retrieving ring data: ", error);
+    });

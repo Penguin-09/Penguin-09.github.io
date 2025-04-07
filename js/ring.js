@@ -23,7 +23,7 @@ function createRingCard(ring) {
     const { name, id, value, weight, imageURL, effect } = ring;
 
     // Store Card Element
-    let cardElement = document.createElement("a");
+    const cardElement = document.createElement("a");
     cardElement.href = "detail.html#" + id;
     cardElement.classList.add(
         "customStoreCard",
@@ -34,50 +34,50 @@ function createRingCard(ring) {
     );
 
     // Name Element
-    let nameElement = document.createElement("h2");
+    const nameElement = document.createElement("h2");
     nameElement.textContent = name;
     nameElement.classList.add("customStoreCardName");
     cardElement.appendChild(nameElement);
 
     // Image Element
-    let imageElement = document.createElement("img");
+    const imageElement = document.createElement("img");
     imageElement.src = imageURL;
     imageElement.alt = name;
     cardElement.appendChild(imageElement);
 
     // Effect Element
-    let effectElement = document.createElement("p");
+    const effectElement = document.createElement("p");
     effectElement.textContent = effect;
     cardElement.appendChild(effectElement);
 
-    let infoElement = document.createElement("div");
+    const infoElement = document.createElement("div");
     infoElement.classList.add("customStoreCardInfo");
 
     // Price Element
-    let priceDivElement = document.createElement("div");
+    const priceDivElement = document.createElement("div");
     priceDivElement.classList.add("customStoreCardPrice");
 
-    let priceImageElement = document.createElement("img");
+    const priceImageElement = document.createElement("img");
     priceImageElement.src = priceImageURL;
     priceImageElement.alt = "souls";
     priceDivElement.appendChild(priceImageElement);
 
-    let priceElement = document.createElement("p");
+    const priceElement = document.createElement("p");
     priceElement.textContent = value + " souls";
     priceDivElement.appendChild(priceElement);
 
     infoElement.appendChild(priceDivElement);
 
     // Weight Element
-    let weightDivElement = document.createElement("div");
+    const weightDivElement = document.createElement("div");
     weightDivElement.classList.add("customStoreCardWeight");
 
-    let weightImageElement = document.createElement("img");
+    const weightImageElement = document.createElement("img");
     weightImageElement.src = weightImageURL;
     weightImageElement.alt = "weight";
     weightDivElement.appendChild(weightImageElement);
 
-    let weightElement = document.createElement("p");
+    const weightElement = document.createElement("p");
     weightElement.textContent = weight + " units";
     weightDivElement.appendChild(weightElement);
 
