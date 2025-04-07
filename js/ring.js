@@ -84,7 +84,7 @@ function createRingCard(ring) {
     infoElement.appendChild(weightDivElement);
     cardElement.appendChild(infoElement);
 
-    console.log("Store card created for ring: " + name);
+    console.info("Store card created for ring: " + name);
 
     return cardElement;
 }

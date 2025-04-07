@@ -13,9 +13,10 @@ async function getRingData(userInput = "") {
             const dataJson = await response.json();
             localStorage.setItem("rings", JSON.stringify(dataJson));
             data = dataJson;
-            console.log("Ring data succesfully retrieved");
+            console.debug("Ring data retrieved from json");
         } else {
             data = JSON.parse(data);
+            console.debug("Ring data retrieved from local storage");
         }
 
         if (searchActive) {
@@ -45,6 +46,8 @@ function searchContains(userInput) {
         pointer = 0;
         printStoreCards(data, pointer);
     });
+
+    console.debug("Search input: " + userInput);
 }
 
 /**
@@ -52,7 +55,7 @@ function searchContains(userInput) {
  */
 function clearStore() {
     document.getElementById("storeElement").innerHTML = "";
-    console.log("Store element cleared");
+    console.debug("Store element cleared");
 }
 
 /**
@@ -67,6 +70,8 @@ function clearSearch() {
         pointer = 0;
         printStoreCards(data, pointer);
     });
+
+    console.debug("Search cleared");
 }
 
 /**
@@ -91,7 +96,7 @@ function printHeroRings(data) {
         // Append the data
         ringElement.src = data[randomIndex].imageURL;
         ringElement.alt = data[randomIndex].name;
-        console.log(
+        console.info(
             "Ring image appended to hero section: " + data[randomIndex].name
         );
     }
@@ -130,6 +135,7 @@ function printStoreCards(data, offSet = 0, limit = 16) {
 function printCartCount() {
     let cartCount = document.getElementById("cartCount");
     cartCount.innerText = cart.length;
+    console.debug("Cart count printed: " + cart.length);
 }
 
 let searchActive = false;
@@ -174,6 +180,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const pageHeight = document.body.scrollHeight;
 
                 if (pageHeight - scrollPosition < 100) {
+                    console.debug("Bottom of the page reached");
+
                     if (searchActive) {
                         getRingData(
                             document.getElementById("searchInput").value

@@ -20,9 +20,10 @@ async function getRingData() {
             const dataJson = await response.json();
             localStorage.setItem("rings", JSON.stringify(dataJson));
             data = dataJson;
-            console.log("Ring data succesfully retrieved");
+            console.debug("Ring data retrieved from json");
         } else {
             data = JSON.parse(data);
+            console.debug("Ring data retrieved from local storage");
         }
 
         return data;
@@ -75,13 +76,14 @@ function printRingInfo(data, id) {
     // Value
     let value = document.getElementById("souls");
     value.innerText = data[id].value + " souls";
+
+    console.debug("Ring data printed: ", data[id].name);
 }
 
 /**
  * Add or remove ring to cart
  */
 function changeCartState() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartButtonText = document.getElementById("cartButtonText");
 
     if (!cart.includes(id)) {
@@ -90,14 +92,14 @@ function changeCartState() {
         localStorage.setItem("cart", JSON.stringify(cart));
         cartButtonText.textContent = "Remove from Cart";
         showAlert(true);
-        console.log("Ring added to cart: ", id);
+        console.debug("Ring added to cart: ", id);
     } else {
         // Remove from cart
         cart = cart.filter((ringId) => ringId !== id);
         localStorage.setItem("cart", JSON.stringify(cart));
         cartButtonText.textContent = "Add to Cart";
         showAlert(false);
-        console.log("Ring removed from cart: ", id);
+        console.debug("Ring removed from cart: ", id);
     }
 }
 
@@ -111,11 +113,12 @@ async function showAlert(isInCart) {
 
     if (isInCart) {
         alertText.textContent = "Ring added to cart!";
-        printCartCount();
     } else {
         alertText.textContent = "Ring removed from cart!";
-        printCartCount();
     }
+
+    printCartCount();
+    console.debug("Alert shown: ", alertText.textContent);
 
     // Display for a determined time
     alert.classList.add("show");
@@ -129,6 +132,7 @@ async function showAlert(isInCart) {
 function printCartCount() {
     let cartCount = document.getElementById("cartCount");
     cartCount.innerText = cart.length;
+    console.debug("Cart count printed: " + cart.length);
 }
 
 /**
@@ -140,8 +144,8 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const id = getIdFromUrl();
-console.log("ID retrieved from URL: ", id);
+const id = parseInt(getIdFromUrl());
+console.debug("ID retrieved from URL: ", id);
 
 let cart = localStorage.getItem("cart");
 
@@ -159,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
             printCartCount();
 
             // Change cart button text if necessary
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
             let cartButtonText = document.getElementById("cartButtonText");
 
             if (cart.includes(id)) {

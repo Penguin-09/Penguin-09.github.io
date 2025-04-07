@@ -12,12 +12,16 @@ async function getRingData() {
         const dataJson = await response.json();
         localStorage.setItem("rings", JSON.stringify(dataJson));
         data = dataJson;
-        console.log("Ring data successfully retrieved");
+        console.debug("Ring data retrieved from json");
     } else {
         data = JSON.parse(data);
+        console.debug("Ring data retrieved from local storage");
     }
 
-    data = data.filter((ring) => cart.includes(ring.id));
+    data = data.filter((ring) => {
+        return cart.includes(ring.id);
+    });
+    console.debug("Ring data filtered by cart");
 
     return data;
 }
@@ -48,6 +52,7 @@ function printCart(data) {
 function printCartCount() {
     let cartCount = document.getElementById("cartCount");
     cartCount.innerText = cart.length;
+    console.debug("Cart count printed: " + cart.length);
 }
 
 let cart = localStorage.getItem("cart");
