@@ -1,6 +1,4 @@
-/**
- * @typedef {Object} Ring
- */
+import { createRingCard } from "./ring.js";
 
 /**
  * Fetch data from Json if needed
@@ -116,82 +114,13 @@ function printStoreCards(data, offSet = 0, limit = 16) {
             "<p class='display-6 d-flex align-items-center py-5'>No rings found</p>";
     }
 
-    if (data.length < length) {
-        length = data.length;
-    }
-
-    const priceImageURL =
-        "https://static.wikia.nocookie.net/darksouls/images/7/78/Soul_of_an_Old_Hand.png";
-    const weightImageURL =
-        "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/icon_weight.png";
+    length = Math.min(length, data.length);
 
     for (let i = offSet; i < length; i++) {
         pointer++;
 
-        // Store Card Element
-        let cardElement = document.createElement("a");
-        cardElement.href = "detail.html#" + data[i].id;
-        cardElement.classList.add(
-            "customStoreCard",
-            "col-12",
-            "col-sm-6",
-            "col-md-4",
-            "col-lg-3"
-        );
-
-        // Name Element
-        let nameElement = document.createElement("h2");
-        nameElement.textContent = data[i].name;
-        nameElement.classList.add("customStoreCardName");
-        cardElement.appendChild(nameElement);
-
-        // Image Element
-        let imageElement = document.createElement("img");
-        imageElement.src = data[i].imageURL;
-        imageElement.alt = data[i].name;
-        cardElement.appendChild(imageElement);
-
-        // Effect Element
-        let effectElement = document.createElement("p");
-        effectElement.textContent = data[i].effect;
-        cardElement.appendChild(effectElement);
-
-        let infoElement = document.createElement("div");
-        infoElement.classList.add("customStoreCardInfo");
-
-        // Price Element
-        let priceDivElement = document.createElement("div");
-        priceDivElement.classList.add("customStoreCardPrice");
-
-        let priceImageElement = document.createElement("img");
-        priceImageElement.src = priceImageURL;
-        priceImageElement.alt = "souls";
-        priceDivElement.appendChild(priceImageElement);
-
-        let priceElement = document.createElement("p");
-        priceElement.textContent = data[i].value + " souls";
-        priceDivElement.appendChild(priceElement);
-
-        infoElement.appendChild(priceDivElement);
-
-        // Weight Element
-        let weightDivElement = document.createElement("div");
-        weightDivElement.classList.add("customStoreCardWeight");
-
-        let weightImageElement = document.createElement("img");
-        weightImageElement.src = weightImageURL;
-        weightImageElement.alt = "weight";
-        weightDivElement.appendChild(weightImageElement);
-
-        let weightElement = document.createElement("p");
-        weightElement.textContent = data[i].weight + " units";
-        weightDivElement.appendChild(weightElement);
-
-        infoElement.appendChild(weightDivElement);
-        cardElement.appendChild(infoElement);
-        storeElement.appendChild(cardElement);
-
-        console.log("Store card created for ring: " + data[i].name);
+        const ringCard = createRingCard(data[i]);
+        storeElement.appendChild(ringCard);
     }
 }
 
@@ -216,8 +145,8 @@ if (!cart) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    try {
-        getRingData().then((data) => {
+    getRingData()
+        .then((data) => {
             printHeroRings(data);
             printStoreCards(data);
             printCartCount(cart);
@@ -245,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const pageHeight = document.body.scrollHeight;
 
                 if (pageHeight - scrollPosition < 100) {
-                    if (searchActive === true) {
+                    if (searchActive) {
                         getRingData(
                             document.getElementById("searchInput").value
                         ).then((data) => {
@@ -256,24 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
             });
-
-            // Scroll to element button
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function (e) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute("href").substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    const offset = 70;
-
-                    window.scrollTo({
-                        top: targetElement.offsetTop - offset,
-                        behavior: "smooth",
-                    });
-                });
-            });
+        })
+        .catch((error) => {
+            console.error("Error retrieving ring data: ", error);
         });
-    } catch (error) {
-        console.error("Error caught: ", error);
-    }
 });

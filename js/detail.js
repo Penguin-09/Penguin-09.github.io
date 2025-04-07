@@ -143,6 +143,15 @@ function sleep(ms) {
 const id = getIdFromUrl();
 console.log("ID retrieved from URL: ", id);
 
+let cart = localStorage.getItem("cart");
+
+if (!cart) {
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+} else {
+    cart = JSON.parse(cart);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     try {
         getRingData().then((data) => {
