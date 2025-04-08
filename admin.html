@@ -28,20 +28,158 @@
     </head>
     <body>
         <div class="p-3">
-            <p class="fs-1">Admin page</p>
+            <p class="fs-1 pb-3 text-center">Admin page</p>
 
-            <button
-                class="btn customHover"
-                style="
-                    background-color: var(--colorRed);
-                    color: var(--colorWhite);
-                "
-                id="resetCartButton"
-            >
-                Reset Cart
-            </button>
+            <div class="d-flex justify-content-center">
+                <!-- Cart Reset -->
+                <div class="d-flex col-lg-3 flex-column align-items-center">
+                    <p class="fs-2">Cart reset</p>
 
-            <p class="pt-3" id="alert"></p>
+                    <button
+                        class="btn customHover"
+                        style="
+                            background-color: var(--colorRed);
+                            color: var(--colorWhite);
+                        "
+                        id="resetCartButton"
+                    >
+                        Reset Cart
+                    </button>
+
+                    <p class="pt-3" id="alertReset"></p>
+                </div>
+
+                <!-- Add Ring -->
+                <div class="d-flex col-lg-3 flex-column align-items-center">
+                    <p class="fs-2">Add ring</p>
+
+                    <form class="d-flex flex-column">
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="text"
+                            placeholder="name"
+                            id="addRingName"
+                        />
+
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="number"
+                            placeholder="Value"
+                            id="addRingValue"
+                        />
+
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="number"
+                            placeholder="Weight"
+                            id="addRingWeight"
+                        />
+
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="text"
+                            placeholder="Image URL"
+                            id="addRingImageURL"
+                        />
+
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="text"
+                            placeholder="Effect"
+                            id="addRingEffect"
+                        />
+
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="text"
+                            placeholder="Description line 1"
+                            id="addRingDescription1"
+                        />
+
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="text"
+                            placeholder="Description line 2"
+                            id="addRingDescription2"
+                        />
+
+                        <input
+                            class="btn customHover p-2"
+                            style="
+                                background-color: var(--colorRed);
+                                color: var(--colorWhite);
+                            "
+                            type="submit"
+                            id="addRingButton"
+                        />
+                    </form>
+                </div>
+
+                <!-- Remove Ring -->
+                <div class="d-flex col-lg-3 flex-column align-items-center">
+                    <p class="fs-2">Remove Ring</p>
+
+                    <form class="d-flex flex-column">
+                        <input
+                            class="rounded p-2 mb-3 text-center"
+                            style="
+                                background-color: var(--colorGreyLighter);
+                                border: none;
+                                color: var(--colorWhite);
+                            "
+                            type="number"
+                            placeholder="Ring ID"
+                            id="removeInput"
+                        />
+                        <input
+                            class="btn customHover"
+                            style="
+                                background-color: var(--colorRed);
+                                color: var(--colorWhite);
+                            "
+                            type="submit"
+                            id="removeRingButton"
+                        />
+                    </form>
+
+                    <p id="alertRemove"></p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
