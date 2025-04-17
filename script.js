@@ -124,6 +124,8 @@ getLoreData().then((data) => {
     preloadBackgroundImages(data);
     printLore(data);
 
+    const popUpElement = document.getElementById("popup");
+
     const totalEras = data.length - 1;
     const eraLength = Math.floor(rangeMax / (totalEras + 1));
     console.debug("Total eras: ", totalEras, "| Era length: ", eraLength);
@@ -133,6 +135,8 @@ getLoreData().then((data) => {
     // Range slider listener
     const rangeSlider = rangeElement;
     rangeSlider.addEventListener("input", () => {
+        popUpElement.remove();
+
         rangeValue = rangeElement.value;
 
         const newEra = Math.floor(rangeValue / eraLength);
@@ -158,7 +162,6 @@ getLoreData().then((data) => {
 
     // Close Button listener
     const closeButton = document.getElementById("closeButton");
-    const popUpElement = document.getElementById("popup");
     closeButton.addEventListener("click", () => {
         popUpElement.remove();
         console.debug("Lore pop-up closed");
